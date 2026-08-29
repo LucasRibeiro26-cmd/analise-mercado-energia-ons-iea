@@ -62,14 +62,29 @@ Diagramas de dispersão demonstrando a correlação operativa entre bacias hidro
 
 ## 📁 Estrutura do Repositório
 
-```text
-├── 01_evolucao_renovaveis.png
-├── 02_feature_importance.png
-├── 03_termica_solar_brent.png
-├── 04_hidro_termica_eolica.png
-├── Artigo de Mercado V. Finale.pdf
-├── Dashboard Artigo de Mercado de Energia.pbix
-├── Mercado_de_Energia_V_f.ipynb
-├── README.md
-├── dataset_final_202605181842.csv
-└── queries.sql
+* `01_evolucao_renovaveis.png`
+* `02_feature_importance.png`
+* `03_termica_solar_brent.png`
+* `04_hidro_termica_eolica.png`
+* `Artigo de Mercado V. Finale.pdf`
+* `Dashboard Artigo de Mercado de Energia.pbix`
+* `Mercado_de_Energia_V_f.ipynb`
+* `README.md`
+* `dataset_final_202605181842.csv`
+* `queries.sql`
+
+---
+
+## 🚀 Como Executar e Navegar pelo Projeto
+
+1. **Leitura do Artigo (Teoria e Negócios):**
+   * Abra o arquivo `Artigo de Mercado V. Finale.pdf` diretamente no repositório para ler o estudo completo.
+
+2. **Pipeline de Dados (SQL):**
+   * As instruções de extração, tratamento e junção de bases estão documentadas no arquivo `queries.sql`.
+
+3. **Execução do Modelo (Python):**
+   * Abra o arquivo `Mercado_de_Energia_V_f.ipynb` para visualizar a limpeza dos dados (`dataset_final_202605181842.csv`) e o treinamento do Random Forest.
+
+4. **Navegação no Dashboard (Power BI):**
+   * Baixe e abra o arquivo `Dashboard Artigo de Mercado de Energia.pbix` no **Power BI Desktop** para explorar os relatórios e utilizar os filtros interativos.
