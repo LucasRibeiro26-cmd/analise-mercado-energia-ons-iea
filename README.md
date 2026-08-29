@@ -88,3 +88,12 @@ Diagramas de dispersão demonstrando a correlação operativa entre bacias hidro
 
 4. **Navegação no Dashboard (Power BI):**
    * Baixe e abra o arquivo `Dashboard Artigo de Mercado de Energia.pbix` no **Power BI Desktop** para explorar os relatórios e utilizar os filtros interativos.
+
+
+## 👥 Autores e Orientação
+
+Este projeto e o artigo correspondente foram desenvolvidos em colaboração:
+- **Lucas Silva Ribeiro:** Engenharia de Dados, Modelagem ML e Dashboard
+- **Maria Eduarda Ribeiro dos Passos:** Pesquisa e Coautoria
+- **Prof. Roberto Akira Yamachita:** Orientação
+- **Marcos Rafael Pereira Batista:** Coorientação
