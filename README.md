@@ -1,4 +1,6 @@
-# Análise Multivariada da Matriz Elétrica Brasileira (ONS) vs. Petróleo Brent (EIA/IPEADATA)
+# Análise da Correlação entre os Preços do Petróleo e a Atratividade de Investimentos em Geração Solar e Eólica
+
+> 📄 **Artigo Completo:** Leia o estudo teórico e conclusões detalhadas no arquivo [Artigo de Mercado V. Finale.pdf](Artigo%20de%20Mercado%20V.%20Finale.pdf)
 
 Pipeline analítico de dados que integra séries temporais diárias do **Operador Nacional do Sistema Elétrico (ONS)** com cotações internacionais do **Petróleo Bruto tipo Brent (EIA/IPEADATA)** no período de 2012 a 2026. O projeto engloba modelagem relacional em SQL, algoritmos de *Machine Learning* (*Random Forest Regressor*) em Python para cálculo de *Feature Importance* e desenvolvimento de painel executivo interativo no Power BI.
 
@@ -58,10 +60,6 @@ Diagramas de dispersão demonstrando a correlação operativa entre bacias hidro
 
 ---
 
-> 📄 **Artigo Completo:** Leia o estudo completo em [Artigo_Mercado_de_Energia.pdf](./Artigo_Mercado_de_Energia.pdf)
-
----
-
 ## 📁 Estrutura do Repositório
 
 ```text
@@ -69,8 +67,9 @@ Diagramas de dispersão demonstrando a correlação operativa entre bacias hidro
 ├── 02_feature_importance.png
 ├── 03_termica_solar_brent.png
 ├── 04_hidro_termica_eolica.png
+├── Artigo de Mercado V. Finale.pdf
 ├── Dashboard Artigo de Mercado de Energia.pbix
-├── dataset_final_202605181842.csv
 ├── Mercado_de_Energia_V_f.ipynb
-├── queries.sql
-└── README.md
+├── README.md
+├── dataset_final_202605181842.csv
+└── queries.sql
