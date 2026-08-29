@@ -1,1 +1,76 @@
-# analise-mercado-energia-ons-iea
+# Análise Multivariada da Matriz Elétrica Brasileira (ONS) vs. Petróleo Brent (EIA/IPEADATA)
+
+Pipeline analítico de dados que integra séries temporais diárias do **Operador Nacional do Sistema Elétrico (ONS)** com cotações internacionais do **Petróleo Bruto tipo Brent (EIA/IPEADATA)** no período de 2012 a 2026. O projeto engloba modelagem relacional em SQL, algoritmos de *Machine Learning* (*Random Forest Regressor*) em Python para cálculo de *Feature Importance* e desenvolvimento de painel executivo interativo no Power BI.
+
+---
+
+## 📌 Indicadores Históricos Consolidados (2012–2026)
+
+- **Cotação Média do Petróleo Brent (FOB):** US$ 75,66 / barril
+- **Geração Hidrelétrica Média:** 2,30 Mi MWmed
+- **Geração Termelétrica Média:** 554,39 Mil MWmed
+- **Geração Eólica Média:** 264,23 Mil MWmed
+- **Geração Solar Centralizada Média:** 89,80 Mil MWmed
+
+---
+
+## 🛠️ Stack Tecnológica
+
+- **SQL (SQLite):** Agregações diárias e junções relacionais entre bases ONS e IPEADATA.
+- **Python (Google Colab):** Tratamento de dados, interpolação temporal e modelagem com Scikit-Learn.
+- **Business Intelligence (Power BI):** Modelagem dimensional, métricas DAX e relatórios com filtros temporais dinâmicos.
+- **Fontes de Dados:** ONS (Dados Abertos) e IPEADATA / EIA (Série EIA366_PBRENT366).
+
+---
+
+## 🧠 Modelagem Estatística e Machine Learning: Feature Importance
+
+Foram ajustados dois modelos de **Random Forest Regressor** (1000 estimadores) para quantificar o peso relativo de cada variável física e macroeconômica na geração renovável:
+
+| Variável Explicativa | Impacto na Geração Solar (%) | Impacto na Geração Eólica (%) |
+|---|:---:|:---:|
+| **Geração Renovável Par (Eólica / Solar)** | **56,37%** | **81,21%** |
+| **Preço do Petróleo Brent (US$)** | **17,62%** | **3,16%** |
+| **Geração Hidrelétrica (MWmed)** | **14,91%** | **13,11%** |
+| **Geração Termelétrica (MWmed)** | **11,10%** | **2,52%** |
+
+> **Diagnóstico:** A complementaridade entre solar e eólica exerce a maior dominância estatística na matriz. As variações do Brent impactam principalmente a curva solar (17,62%), enquanto o parque hidrelétrico atua como lastro de regulação estável para ambas as fontes (~13% a 15%).
+
+---
+
+## 📊 Visualizações do Dashboard Executivo
+
+### 1. Evolução Pareada das Renováveis
+Mapeamento da evolução temporal de geração média entre as fontes solar e eólica.
+![Evolução Renováveis](01_evolucao_renovaveis.png)
+
+### 2. Decomposição de Feature Importance
+Pesos de importância obtidos via Random Forest para as fontes solar e eólica.
+![Feature Importance](02_feature_importance.png)
+
+### 3. Dinâmica Térmica: Impacto Solar e Preço do Brent
+Análise de despacho térmico em contraponto à expansão solar e às cotações internacionais do barril de petróleo.
+![Térmica vs Solar e Brent](03_termica_solar_brent.png)
+
+### 4. Complementariedade Hídrica vs. Térmica e Eólica
+Diagramas de dispersão demonstrando a correlação operativa entre bacias hidrográficas, suporte térmico e geração eólica.
+![Dispersão Hidro Térmica Eólica](04_hidro_termica_eolica.png)
+
+---
+
+> 📄 **Artigo Completo:** Leia o estudo completo em [Artigo_Mercado_de_Energia.pdf](./Artigo_Mercado_de_Energia.pdf)
+
+---
+
+## 📁 Estrutura do Repositório
+
+```text
+├── 01_evolucao_renovaveis.png
+├── 02_feature_importance.png
+├── 03_termica_solar_brent.png
+├── 04_hidro_termica_eolica.png
+├── Dashboard Artigo de Mercado de Energia.pbix
+├── dataset_final_202605181842.csv
+├── Mercado_de_Energia_V_f.ipynb
+├── queries.sql
+└── README.md
